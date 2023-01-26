@@ -1,0 +1,32 @@
+.sidebar{
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: white;
+  padding: 20px 15px;
+}
+
+.brand{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link{
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover{
+  color: white;
+}
+
+.close__btn{
+  cursor: pointer;
+}
