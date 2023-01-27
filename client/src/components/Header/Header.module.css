@@ -1,9 +1,11 @@
 .header {
   background: #000;
   height: 60px;
+  width: 100%;
   color: white;
   top: -100px;
   transition: border-bottom 0.5 ease-in-out;
+  transition: padding 0.5 ease-in-out;
 }
 
 .pointer {
@@ -83,8 +85,11 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #ff4545;
   transition: top .5s ease-in-out;
+}
+
+.fix{
+  padding: 0 245px;
 }

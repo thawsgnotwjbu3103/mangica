@@ -33,7 +33,7 @@ export default () => {
 
 
     return (
-        <div className={`${styles.header} ${isScroll ? styles.sticky : ""}`} ref={ref}>
+        <div className={`${styles.header} ${isScroll ? styles.sticky : ""} ${isScroll && isOpen ? styles.fix : ""}`} ref={ref}>
             <div className="container d-flex justify-content-between align-items-center h-100 p-3">
                 <div>
                     {!isOpen && (
