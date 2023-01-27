@@ -1,0 +1,7 @@
+.open__sidebar{
+    margin-left: 250px;
+}
+
+.main__content{
+    transition: margin-left .5s
+}

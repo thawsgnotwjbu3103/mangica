@@ -1,15 +1,15 @@
 import styles from "./Layout.module.css"
-import Header from "../Header/Header"
+import { HomeProvider, HomeContext } from "../../context/HomeContext"
 import Sidebar from "../Sidebar/Sidebar"
+import Main from "../Main/Main"
 
 export default ({ children }) => {
-  return (
-    <div className={`${styles.app_layout}`}>
-      <Sidebar />
-      <div>
-        <Header />
-        {children}
-      </div>
-    </div>
-  )
+    return (
+        <HomeProvider>
+            <div className={`${styles.app_layout}`}>
+                <Sidebar />
+                <Main children={children}/>
+            </div>
+        </HomeProvider>
+    )
 }
