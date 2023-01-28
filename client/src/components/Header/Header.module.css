@@ -3,9 +3,11 @@
   height: 60px;
   width: 100%;
   color: white;
-  top: -100px;
-  transition: border-bottom 0.5 ease-in-out;
-  transition: padding 0.5 ease-in-out;
+  top: 0;
+  z-index: 99999;
+  position: sticky;
+  border-bottom: 1px solid #000;
+  transition: border-bottom 0.3s ease-out;
 }
 
 .pointer {
@@ -57,6 +59,13 @@
   font-weight: 500;
 }
 
+.right__items{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    gap: 20px;
+}
+
 .form__input {
   position: relative;
 }
@@ -82,14 +91,6 @@
   visibility: hidden;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #ff4545;
-  transition: top .5s ease-in-out;
-}
-
-.fix{
-  padding: 0 245px;
+.scrolled{
+    border-bottom: 1px solid #ff4545;
 }

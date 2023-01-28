@@ -3,6 +3,7 @@ import { useContext, useEffect, useRef } from "react"
 import styles from "./Header.module.css"
 import { Link, BrowserRouter as Router } from "react-router-dom"
 import { useState } from "react"
+import { BREAK_POINT_HEADER } from "../../utils/constant"
 
 export default () => {
     const { isOpen, setIsOpen, width } = useContext(HomeContext);
@@ -15,13 +16,7 @@ export default () => {
     }
 
     const handleScroll = () => {
-        const { offsetTop } = ref.current;
-        console.log(offsetTop, window.scrollY)
-        if(window.scrollY > offsetTop) {
-            setIsScroll(true);
-        } else {
-            setIsScroll(false)
-        }
+        setIsScroll(window.scrollY > 0)
     }
 
     useEffect(() => {
@@ -33,19 +28,17 @@ export default () => {
 
 
     return (
-        <div className={`${styles.header} ${isScroll ? styles.sticky : ""} ${isScroll && isOpen ? styles.fix : ""}`} ref={ref}>
+        <div className={`${styles.header} ${isScroll ? styles.scrolled : ""}`} ref={ref}>
             <div className="container d-flex justify-content-between align-items-center h-100 p-3">
                 <div>
                     {!isOpen && (
                         <>
                             <span onClick={handleOpen} className={`fa-solid fa-xl fa-align-right ${styles.pointer}`}></span>
-                            <Router>
-                                <Link className={styles.link} to="/">NGFMANGA</Link>
-                            </Router>
+                            <Link className={styles.link} to="/">NGFMANGA</Link>
                         </>
                     )}
                 </div>
-                {width > 768 ? (
+                {width > BREAK_POINT_HEADER ? (
                     <div className={styles.right__items}>
                         <div className={styles.form__input}>
                             <form>
@@ -62,10 +55,14 @@ export default () => {
                                 <i className="fa-solid fa-magnifying-glass"></i>
                             </div>
                         </div>
+                        <div>
+                            <i className="fa-regular fa-2xl fa-circle-user"></i>
+                        </div>
                     </div>
                 ) : (
-                    <div>
+                    <div className="d-flex align-items-center gap-4">
                         <i className="fa-solid fa-lg fa-magnifying-glass"></i>
+                        <i className="fa-regular fa-lg fa-circle-user"></i>
                     </div>
                 )}
             </div>

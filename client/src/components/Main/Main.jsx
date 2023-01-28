@@ -8,9 +8,7 @@ export default ({ children }) => {
     return (
         <div className={`${styles.main__content} ${isOpen ? styles.open__sidebar : ""}`}>
             <Header />
-            <div className="container py-3">
-                {children}
-            </div>
+            {children}
         </div>
     )
 }
