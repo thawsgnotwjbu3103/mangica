@@ -1,13 +1,14 @@
 .header {
-  background: #000;
+  background: transparent;
   height: 60px;
   width: 100%;
   color: white;
   top: 0;
   z-index: 99999;
   position: sticky;
-  border-bottom: 1px solid #000;
-  transition: border-bottom 0.3s ease-out;
+  border-bottom: 1px solid transparent;
+  transition: background 0.5s ease-in;
+  transition: border-bottom 0.5s ease-in-out;
 }
 
 .pointer {
@@ -93,4 +94,5 @@
 
 .scrolled{
     border-bottom: 1px solid #ff4545;
+    background: #000;
 }

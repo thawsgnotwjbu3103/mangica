@@ -111,7 +111,6 @@ export default () => {
                 </div>
                 <span className={styles.cpr}>@2023 - NgfManga</span>
             </div>
-
         </div>
     )
 }

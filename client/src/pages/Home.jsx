@@ -16,7 +16,7 @@ import chunkify from "../utils/chunkify";
 export default () => {
     const { width } = useContext(HomeContext);
     return (
-        <div className={`${styles.container__box} container`}>
+        <div className={`${styles.container__box} container mb-5`}>
             <div className={styles.box__items}>
                 <h3 className={styles.main__title}>Popular New Title</h3>
                 <div className={styles.slider}>
