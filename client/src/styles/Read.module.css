@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 32px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: 600;
+}
+
+.author {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.uploaded__team {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.link {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding: 5px 10px;
+  background: #212529;
+  border-radius: 2px;
+}
+
+.link:hover {
+  color: #fff;
+  background: #ff4545;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
+.config{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.select{
+    background: #212529;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    width: 150px;
+}
