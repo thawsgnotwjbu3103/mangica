@@ -100,6 +100,10 @@
   overflow-y: scroll;
 }
 
+.genres__tags::-webkit-scrollbar{
+  width: 5px;
+}
+
 .genres__tag {
   font-size: 12px;
   background: #212529;
@@ -152,6 +156,10 @@
   display: inline-block;
 }
 
+.text::-webkit-scrollbar{
+  width: 5px;
+}
+
 .link {
   color: #fff;
   text-decoration: none;
@@ -196,7 +204,7 @@
   height: calc(100% - 150px);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .chapter__items {

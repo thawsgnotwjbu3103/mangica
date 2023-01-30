@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default () => {
     const { width, setTitle } = useContext(HomeContext);
-    const arr = [...Array(9).keys()];
+    const arr = [...Array(8).keys()];
 
     useEffect(() => {
         setTitle("Chainsaw Man")

@@ -1,0 +1,9 @@
+.reader__item{
+  width: auto;
+  height: 100%;
+}
+
+.reader__img{
+  width: 100%;
+  object-fit: contain;
+}

@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay, Mousewheel } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useId } from "react";
@@ -35,8 +35,7 @@ export default () => {
                             pauseOnMouseEnter: true
                         }}
                         loop={true}
-                        mousewheel={true}
-                        modules={[Pagination, Autoplay, Mousewheel]}
+                        modules={[Pagination, Autoplay]}
                         className="w-100 h-100"
                     >
                         {popularData && popularData.map((el) => (
