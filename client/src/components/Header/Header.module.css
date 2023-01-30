@@ -1,5 +1,5 @@
 .header {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0);
   height: 60px;
   width: 100%;
   color: white;
@@ -7,7 +7,9 @@
   z-index: 99999;
   position: sticky;
   border-bottom: 1px solid transparent;
-  transition: background 0.5s ease-in;
+  -webkit-transition: background-color 1s ease-in-out;
+  -ms-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
   transition: border-bottom 0.5s ease-in-out;
 }
 
@@ -60,11 +62,11 @@
   font-weight: 500;
 }
 
-.right__items{
-    display: flex;
-    flex-direction: row ;
-    align-items: center;
-    gap: 20px;
+.right__items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .form__input {
@@ -92,7 +94,7 @@
   visibility: hidden;
 }
 
-.scrolled{
-    border-bottom: 1px solid #ff4545;
-    background: #000;
+.scrolled {
+  border-bottom: 1px solid #ff4545;
+  background-color: rgba(0, 0, 0, 1);
 }

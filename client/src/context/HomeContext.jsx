@@ -6,6 +6,7 @@ export const HomeContext = createContext({});
 export const HomeProvider = ({ children }) => {
     const [isOpen, setIsOpen] = useState(true);
     const [width, setWidth] = useState(window.innerWidth);
+    const [title, setTitle] = useState(null);
 
     const handleSizeChange = () => {
         setWidth(window.innerWidth);
@@ -22,7 +23,15 @@ export const HomeProvider = ({ children }) => {
         setIsOpen(width > BREAK_POINT_CLOSE_SIDE_BAR)
     }, [width])
 
-    return <HomeContext.Provider value={{ isOpen, setIsOpen, width}}>
+    useEffect(() => {
+        if(title) {
+            document.title =  `${title} - NgfManga`;
+        } else {
+            document.title = `NgfManga`
+        }
+    }, [title])
+
+    return <HomeContext.Provider value={{ isOpen, setIsOpen, width, setTitle}}>
         {children}
     </HomeContext.Provider>
 }

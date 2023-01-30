@@ -4,7 +4,7 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay, Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import { useContext, useId } from "react";
+import { useContext, useEffect, useId } from "react";
 import { HomeContext } from "../context/HomeContext"
 import { BREAK_POINT_CONTAINER } from "../utils/constant";
 import PopularSwiperItem from "../components/Home/PopularSwiperItem/PopularSwiperItem";
@@ -14,7 +14,11 @@ import { popularData, latestUpdate, seasonalMangas, recentlyAdded } from "../uti
 import chunkify from "../utils/chunkify";
 
 export default () => {
-    const { width } = useContext(HomeContext);
+    const { width, setTitle } = useContext(HomeContext);
+    useEffect(() => {
+        setTitle(null);
+    }, [])
+
     return (
         <div className={`${styles.container__box} container mb-5`}>
             <div className={styles.box__items}>
@@ -52,7 +56,7 @@ export default () => {
                 </div>
                 <div className={`d-flex gap-3 ${width > BREAK_POINT_CONTAINER ? "" : "flex-column"}`}>
                     {chunkify(latestUpdate.items, latestUpdate.per_item, true).map((el, idx) => (
-                        <ContainerLatest key={useId()} data={el}/>
+                        <ContainerLatest key={useId()} data={el} />
                     ))}
                 </div>
             </div>
@@ -76,7 +80,7 @@ export default () => {
                     >
                         {seasonalMangas && seasonalMangas.map(el => (
                             <SwiperSlide key={useId()}>
-                                <SwiperItem data={el}/>
+                                <SwiperItem data={el} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -102,7 +106,7 @@ export default () => {
                     >
                         {recentlyAdded && recentlyAdded.map(el => (
                             <SwiperSlide key={useId()}>
-                                <SwiperItem data={el}/>
+                                <SwiperItem data={el} />
                             </SwiperSlide>
                         ))}
                     </Swiper>

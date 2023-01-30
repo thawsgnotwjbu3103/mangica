@@ -1,7 +1,7 @@
 import { HomeContext } from "../../context/HomeContext"
 import { useContext, useEffect, useRef } from "react"
 import styles from "./Header.module.css"
-import { Link, BrowserRouter as Router } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { useState } from "react"
 import { BREAK_POINT_HEADER } from "../../utils/constant"
 
