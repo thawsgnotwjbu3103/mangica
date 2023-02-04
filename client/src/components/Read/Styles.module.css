@@ -3,7 +3,18 @@
   height: 100%;
 }
 
+.reader__vertical{
+  max-width: 784px;
+  height: 100%;
+}
+
 .reader__img{
-  width: 100%;
+  max-width: 784px;
   object-fit: contain;
+}
+
+.reader__box{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }

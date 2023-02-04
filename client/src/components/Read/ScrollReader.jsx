@@ -17,7 +17,7 @@ export default ({ images }) => {
       modules={[FreeMode, Scrollbar, Mousewheel]}
       className={styles.reader__item}
     >
-      <SwiperSlide>
+      <SwiperSlide className={styles.reader__box}>
         {images && images.map(el => (
           <img className={styles.reader__img} src={el} />
         ))}
