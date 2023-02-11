@@ -19,12 +19,12 @@ export default () => {
                     <div className={styles.right__cover}>
                         <img className={styles.right__cover_img} src={`/cover.png`} />
                         <div className={styles.right__cover_detail}>
-                            <span>You are reading: </span>
+                            <span>Bạn đang đọc: </span>
                             <span className={styles.title}>CHAINSAW MAN</span>
                             <Link className={styles.author}>Fujimoto Tatsuki</Link>
                             <div className={styles.genres}>
                                 <span className={styles.genres__container}>
-                                    <span className={styles.genres__title}>Genres: </span>
+                                    <span className={styles.genres__title}>Thể loại: </span>
                                     <span className={styles.genres__tags}>
                                         <Link className={styles.genres__tag}>ACTION</Link>
                                         <Link className={styles.genres__tag}>COMEDY</Link>
@@ -32,11 +32,11 @@ export default () => {
                                 </span>
                             </div>
                             <div className={styles.buy__now}>
-                                <span className={styles.genres__title}>Like this one ?</span>
-                                <Link target={"_blank"} className={styles.support__author}>SUPPORT THE AUTHOR</Link>
+                                <span className={styles.genres__title}>Bạn thích truyện này ?</span>
+                                <Link target={"_blank"} className={styles.support__author}>ỦNG HỘ TÁC GIẢ NGAY</Link>
                             </div>
                             <div className={styles.description}>
-                                <span className={styles.genres__title}>Summary: </span>
+                                <span className={styles.genres__title}>Tóm tắt: </span>
                                 <span className={styles.text}>
                                     Broke young man + chainsaw dog demon = Chainsaw Man!
                                     The name says it all! Denji's life of poverty is changed forever when he merges with his pet chainsaw dog, Pochita!
@@ -47,25 +47,25 @@ export default () => {
                                 <Link className={styles.link}>
                                     <i className="fa-solid fa-book-open-reader"></i>
                                     <span className={styles.genres__title}>
-                                        Read
+                                        Đọc
                                     </span>
                                 </Link>
                                 <Link className={styles.link}>
                                     <i className="fa-solid fa-bookmark"></i>
                                     <span className={styles.genres__title}>
-                                        Add to library
+                                        Lưu vào thư viện
                                     </span>
                                 </Link>
                                 <Link className={styles.link}>
                                     <i className="fa-regular fa-heart"></i>
                                     <span className={styles.genres__title}>
-                                        Like
+                                        THÍCH
                                     </span>
                                 </Link>
                                 <Link className={styles.link}>
                                     <i className="fa-solid fa-bug"></i>
                                     <span className={styles.genres__title}>
-                                        Report
+                                        Báo cáo
                                     </span>
                                 </Link>
                             </div>
@@ -75,6 +75,12 @@ export default () => {
                 </div>
             ) : ""}
             <div className={`${styles.right__side}`}>
+                {width <= BREAK_POINT_LEFT_COVER ?
+                    <div className="d-flex flex-column">
+                        <span className={styles.list__title}>You are reading: </span>
+                        <span className={styles.list__title}>Chainsaw Man</span>
+                    </div>
+                    : <></>}
                 <span className={styles.list__title}>List of chapters</span>
                 <div className={styles.chapters__container}>
                     {arr && arr.map((el, idx) => (
@@ -113,6 +119,7 @@ export default () => {
                         <i className="fa-solid fa-2xl fa-arrow-right"></i>
                     </Link>
                 </div>
+                <div className="py-3"></div>
             </div>
         </div>
     )

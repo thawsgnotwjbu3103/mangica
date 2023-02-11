@@ -54,31 +54,30 @@
   background: #ff4545;
 }
 
-.settings{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 300px;
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
 }
 
-.config{
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
+.config {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
 }
 
-.select{
-    background: #212529;
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-    width: 150px;
+.select {
+  background: #212529;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  width: 150px;
 }
 
-.reader__container{
+.reader__container {
   display: flex;
   justify-content: center;
   width: auto;
-  min-height: 1145px;
+  height: auto;
 }
-

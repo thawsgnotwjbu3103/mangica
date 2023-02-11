@@ -57,7 +57,7 @@ export default () => {
                                 <Link className={`${styles.link} ${styles.link__item}`}>Tìm kiếm</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Manga mới thêm</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Thêm gần đây</Link>
                             </li>
                             <li>
                                 <Link className={`${styles.link} ${styles.link__item}`}>Mới cập nhật</Link>

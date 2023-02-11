@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useId } from "react";
 import { HomeContext } from "../context/HomeContext"
-import { BREAK_POINT_CONTAINER } from "../utils/constant";
+import { BREAK_POINT_CONTAINER, BREAK_POINT_HEADER } from "../utils/constant";
 import PopularSwiperItem from "../components/Home/PopularSwiperItem/PopularSwiperItem";
 import ContainerLatest from "../components/Home/ContainerLatest/ContainerLatest";
 import SwiperItem from "../components/Home/SwiperItem/SwiperItem";
@@ -22,10 +22,11 @@ export default () => {
     return (
         <div className={`${styles.container__box} container mb-5`}>
             <div className={styles.box__items}>
-                <h3 className={styles.main__title}>Popular New Title</h3>
+                <h3 className={styles.main__title}>NỔI TIẾNG MỚI NHẤT</h3>
                 <div className={styles.slider}>
                     <Swiper
                         direction={"vertical"}
+                        // cssMode={true}
                         pagination={{
                             clickable: true,
                             bulletActiveClass: styles.active__item
@@ -48,7 +49,7 @@ export default () => {
             </div>
             <div className={styles.box__items}>
                 <div className="d-flex justify-content-between align-items-center">
-                    <h3 className={styles.main__title}>Latest Updates</h3>
+                    <h3 className={styles.main__title}>MỚI CẬP NHẬT</h3>
                     <Link className={styles.link}>
                         <i className="fa-solid fa-2xl fa-arrow-right"></i>
                     </Link>
@@ -60,7 +61,7 @@ export default () => {
                 </div>
             </div>
             <div className={styles.box__items}>
-                <h3 className={styles.main__title}>Seasonal Mangas</h3>
+                <h3 className={styles.main__title}>CÁC TRUYỆN THEO MÙA</h3>
                 <div style={styles.seasonal__slider}>
                     <Swiper
                         slidesPerView={3}
@@ -70,6 +71,7 @@ export default () => {
                             }
                         }}
                         spaceBetween={20}
+                        cssMode={true}
                         autoplay={{
                             delay: 2500
                         }}
@@ -86,7 +88,7 @@ export default () => {
                 </div>
             </div>
             <div className={styles.box__items}>
-                <h3 className={styles.main__title}>Recenly Added</h3>
+                <h3 className={styles.main__title}>ĐƯỢC THÊM GẦN ĐÂY</h3>
                 <div style={styles.seasonal__slider}>
                     <Swiper
                         slidesPerView={3}
@@ -95,6 +97,7 @@ export default () => {
                                 slidesPerView: 5
                             }
                         }}
+                        cssMode={true}
                         spaceBetween={20}
                         autoplay={{
                             delay: 2500

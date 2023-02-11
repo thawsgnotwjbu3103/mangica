@@ -34,7 +34,7 @@ export default () => {
                     {!isOpen && (
                         <>
                             <span onClick={handleOpen} className={`fa-solid fa-xl fa-align-right ${styles.pointer}`}></span>
-                            <Link className={styles.link} to="/">NGFMANGA</Link>
+                            <Link className={styles.link} to="/">MANGICA</Link>
                         </>
                     )}
                 </div>
@@ -47,7 +47,7 @@ export default () => {
                                     onFocus={() => setIsFocus(true)}
                                     type="text"
                                     className={styles.text__input}
-                                    placeholder="Search" />
+                                    placeholder={isFocus ? "" : "Tìm kiếm..."} />
                             </form>
                             <div className={styles.input__items}>
                                 <span className={`${styles.input__item} ${isFocus ? styles.invisible : ""}`}>Ctrl</span>
