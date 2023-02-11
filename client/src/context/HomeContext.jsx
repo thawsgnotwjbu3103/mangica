@@ -25,9 +25,9 @@ export const HomeProvider = ({ children }) => {
 
     useEffect(() => {
         if(title) {
-            document.title =  `${title} - NgfManga`;
+            document.title =  `${title} - Mangica`;
         } else {
-            document.title = `NgfManga`
+            document.title = `Mangica`
         }
     }, [title])
 

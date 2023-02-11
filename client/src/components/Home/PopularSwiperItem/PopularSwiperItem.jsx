@@ -15,7 +15,7 @@ export default ({ data }) => {
                     <span className={styles.author}>{data.author}</span>
                     <span className={styles.tags}>
                         {data.tags && data.tags.map((tag) => (
-                            <span key={useId()} className={styles.tag_item}>{tag}</span>
+                            <Link to={"#"} key={useId()} className={styles.tag_item}>{tag}</Link>
                         ))}
                     </span>
                     <span className={styles.description}>{data.description}</span>

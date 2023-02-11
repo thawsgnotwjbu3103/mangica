@@ -15,33 +15,33 @@ export default () => {
             <div className="py-2 px-4 h-100">
                 <div className={styles.brand}>
 
-                    <Link to="/" className={styles.link}>NGFMANGA</Link>
+                    <Link to="/" className={styles.link}>MANGICA</Link>
 
                     <span onClick={handleClose} className={`fa-solid fa-xl fa-xmark ${styles.close__btn}`}></span>
                 </div>
 
                 <Link className={`${styles.link} ${styles.link__item} ${styles.link__item_active}`}>
                     <i className="fa-solid fa-door-open"></i>
-                    <span className={styles.link__text}>Home</span>
+                    <span className={styles.link__text}>Trang chủ</span>
                 </Link>
                 <div>
                     <div className={styles.item}>
                         <i className="fa-solid fa-user-group"></i>
-                        <span className={styles.link__text}>Followed</span>
+                        <span className={styles.link__text}>Theo dõi</span>
                     </div>
                     <div className={styles.sub__items}>
                         <ul>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Library</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Thư viện</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Favorites</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Yêu thích</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Followed Group</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Nhóm đã theo dõi</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Reading history</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Lịch sử</Link>
                             </li>
                         </ul>
                     </div>
@@ -49,21 +49,21 @@ export default () => {
                 <div>
                     <div className={styles.item}>
                         <i className="fa-solid fa-book"></i>
-                        <span className={styles.link__text}>Mangas</span>
+                        <span className={styles.link__text}>Manga</span>
                     </div>
                     <div className={styles.sub__items}>
                         <ul>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Search</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Tìm kiếm</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Recenly Added</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Manga mới thêm</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Latest Updates</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Mới cập nhật</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Random</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Random truyện</Link>
                             </li>
                         </ul>
                     </div>
@@ -71,15 +71,15 @@ export default () => {
                 <div>
                     <div className={styles.item}>
                         <i className="fa-solid fa-person"></i>
-                        <span className={styles.link__text}>Comunity</span>
+                        <span className={styles.link__text}>Cộng đồng</span>
                     </div>
                     <div className={styles.sub__items}>
                         <ul>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Forum</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Diễn đàn</Link>
                             </li>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>Users</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Người dùng</Link>
                             </li>
                         </ul>
                     </div>
@@ -87,12 +87,12 @@ export default () => {
                 <div>
                     <div className={styles.item}>
                         <i className="fa-solid fa-thumbtack"></i>
-                        <span className={styles.link__text}>NgfManga</span>
+                        <span className={styles.link__text}>Mangica</span>
                     </div>
                     <div className={styles.sub__items}>
                         <ul>
                             <li>
-                                <Link className={`${styles.link} ${styles.link__item}`}>About us</Link>
+                                <Link className={`${styles.link} ${styles.link__item}`}>Về chúng tôi</Link>
                             </li>
                         </ul>
                     </div>
@@ -109,7 +109,7 @@ export default () => {
                         <i className="fa-brands fa-2xl fa-twitter"></i>
                     </Link>
                 </div>
-                <span className={styles.cpr}>@2023 - NgfManga</span>
+                <span className={styles.cpr}>@{new Date().getFullYear()} - Mangica</span>
             </div>
         </div>
     )

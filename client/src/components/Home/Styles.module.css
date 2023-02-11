@@ -63,9 +63,16 @@
   font-size: 12px;
   font-weight: 700;
   background-color: #000;
+  color: #fff;
+  text-decoration: none;
   padding: 2px 8px;
   text-transform: uppercase;
   border-radius: 2px;
+}
+
+.tag_item:hover{
+    background-color: #000;
+    color: #ff6f6f;
 }
 
 .description {

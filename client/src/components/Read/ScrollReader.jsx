@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import { FreeMode, Scrollbar, Mousewheel } from "swiper";
+import { useId } from "react";
 
 
 export default ({ images }) => {
@@ -19,7 +20,7 @@ export default ({ images }) => {
     >
       <SwiperSlide className={styles.reader__box}>
         {images && images.map(el => (
-          <img className={styles.reader__img} src={el} />
+          <img key={useId()} className={styles.reader__img} src={el} />
         ))}
       </SwiperSlide>
     </Swiper>
