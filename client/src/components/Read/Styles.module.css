@@ -1,6 +1,0 @@
-.img__container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 784px;
-}
