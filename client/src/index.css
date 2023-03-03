@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #ff5841;
+  --secondary-color: #ff595a;
+  --third-color: #001233;
+  --text-color-light: #ffffff;
+  --text-color-dark: #241819;
+  --font-size-normal: 1em;
+  --font-size-title: 2em;
+  --font-weight-normal: 400;
+  --font-weight-title: 600;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
